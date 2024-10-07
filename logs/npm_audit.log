@@ -1,0 +1,38 @@
+# npm audit report
+
+connect  <=2.13.1
+Severity: moderate
+methodOverride Middleware Reflected Cross-Site Scripting in connect - https://github.com/advisories/GHSA-3fw8-66wf-pr7m
+Cross-Site Scripting in connect - https://github.com/advisories/GHSA-rch9-xh7r-mqgw
+Node Connect Reflected Cross-Site Scripting in Sencha Labs Connect middleware - https://github.com/advisories/GHSA-6w62-83g6-rfhj
+fix available via `npm audit fix --force`
+Will install express@4.21.0, which is a breaking change
+node_modules/connect
+  express  <=4.19.2 || 5.0.0-alpha.1 - 5.0.0-beta.3
+  Depends on vulnerable versions of connect
+  Depends on vulnerable versions of mime
+  Depends on vulnerable versions of qs
+  node_modules/express
+
+
+mime  <1.4.1
+Severity: high
+mime Regular Expression Denial of Service when MIME lookup performed on untrusted user input - https://github.com/advisories/GHSA-wrvr-8mpx-r7pp
+fix available via `npm audit fix --force`
+Will install express@4.21.0, which is a breaking change
+node_modules/mime
+
+qs  <=6.2.3
+Severity: high
+Prototype Pollution Protection Bypass in qs - https://github.com/advisories/GHSA-gqgv-6jq5-jjj9
+Denial-of-Service Extended Event Loop Blocking in qs - https://github.com/advisories/GHSA-f9cm-p3w6-xvr3
+Denial-of-Service Memory Exhaustion in qs - https://github.com/advisories/GHSA-jjv7-qpx3-h62q
+qs vulnerable to Prototype Pollution - https://github.com/advisories/GHSA-hrpp-h998-j3pp
+fix available via `npm audit fix --force`
+Will install express@4.21.0, which is a breaking change
+node_modules/qs
+
+4 vulnerabilities (1 moderate, 3 high)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
