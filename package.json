@@ -10,6 +10,6 @@
   "description": "",
   "dependencies": {
     "express": "4.21.0",
-    "mime": "2.0.0"
+    "mime": "2.0.3"
   }
 }
