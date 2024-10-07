@@ -1,8 +1,21 @@
 const express = require('express');
 const { exec } = require('child_process');
+const os = require('os');
 const app = express();
 const port = 3000;
-const ip = "10.60.12.33"
+
+function getLocalIPAddresses() {
+  const interfaces = os.networkInterfaces();
+  const addresses = [];
+  for (let iface in interfaces) {
+    for (let alias of interfaces[iface]) {
+      if (alias.family === 'IPv4' && !alias.internal) {
+        addresses.push(alias.address);
+      }
+    }
+  }
+  return addresses;
+}
 
 // Route pour démarrer la VM
 app.get('/start-vm', (req, res) => {
@@ -29,5 +42,7 @@ app.get('/stop-vm', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Serveur backend lancé sur http://${ip}:${port}`);
+  const localIPs = getLocalIPAddresses();
+  console.log(localIPs)
+  // console.log(`Serveur backend lancé sur http://${localIPs[0]}:${port}`);
 });
