@@ -43,6 +43,5 @@ app.get('/stop-vm', (req, res) => {
 
 app.listen(port, () => {
   const localIPs = getLocalIPAddresses();
-  console.log(localIPs)
-  // console.log(`Serveur backend lancé sur http://${localIPs[0]}:${port}`);
+  console.log(`Serveur backend lancé sur http://${localIPs[0]}:${port}`);
 });
