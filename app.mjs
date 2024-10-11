@@ -1,7 +1,10 @@
-require('dotenv').config(); // Pour charger les variables d'environnement
-const express = require('express');
-const { spawn } = require('child_process');
-const os = require('os');
+import dotenv from "dotenv";
+import express from "express";
+import { spawn } from "child_process";
+import os from "os";
+
+dotenv.config();
+
 const app = express();
 const port = process.env.PORT;
 const apiToken = process.env.API_TOKEN; // Token d'API pour sécuriser l'accès
