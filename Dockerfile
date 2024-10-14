@@ -1,6 +1,6 @@
 FROM node:20-alpine
 LABEL version="1.0"
-LABEL maintainer="Louis <l.blanleuil0104@gmail.com>"
+LABEL maintainer="Hakios <contact@lblanleuil.fr>"
 LABEL description="API pour gérer des VMs avec Vagrant"
 LABEL environnement="production"
 
