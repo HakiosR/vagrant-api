@@ -6,8 +6,6 @@ import authMiddleware from './middleware/auth.js';
 dotenv.config();
 const app = express();
 
-console.log(process.env.API_TOKEN);
-
 app.use(authMiddleware);
 app.use('/api/vm', routes);
 
